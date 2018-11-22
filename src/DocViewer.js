@@ -18,6 +18,7 @@ import React, { Component } from 'react';
 import { ActivityIndicator, Alert, Button, NativeEventEmitter, NativeModules, Platform, StyleSheet, Text, TouchableHighlight, View } from 'react-native';
 import OpenFile from 'react-native-doc-viewer';
 import Icon from 'react-native-vector-icons/Ionicons';
+import PdfViewer from './PdfViewer';
 
 
 
@@ -43,6 +44,7 @@ export default class DocViewer extends Component {
       animating: false,
       progress: "",
       donebuttonclicked: false,
+      showPdf: false,
     }
     this.eventEmitter = new NativeEventEmitter(NativeModules.RNReactNativeDocViewer);
     this.eventEmitter.addListener('DoneButtonEvent', (data) => {
@@ -190,34 +192,7 @@ export default class DocViewer extends Component {
     // }]
 
     handlePressPdf = () => {
-      this.setState({animating: true});
-      if(Platform.OS === 'ios'){
-          OpenFile.openDocBinaryinUrl([{
-            url:"http://gahp.net/wp-content/uploads/2017/09/sample.pdf",
-            fileNameOptional: "sample.pdf"
-        }], (error, url) => {
-           if (error) {
-            this.setState({animating: false});
-           } else {
-            this.setState({animating: false});
-             console.log(url)
-           }
-         })
-      }else{
-        OpenFile.openDoc([{url:"http://www.africau.edu/images/default/sample.pdf",
-          fileName:"sample",
-          cache:false,
-          fileType:"jpg"
-        }], (error, url) => {
-           if (error) {
-            this.setState({animating: false});
-           } else {
-            this.setState({animating: false});
-             console.log(url)
-           }
-         })
-
-      }
+      this.props.navigation.navigate('Pdfs');
     }
 
 
@@ -327,6 +302,11 @@ export default class DocViewer extends Component {
     }
 
   render() {
+
+    if(this.state.showPdf) {
+      return <PdfViewer />
+    }
+
     return (
 
       <View style={styles.container}>
