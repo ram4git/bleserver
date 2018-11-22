@@ -1,0 +1,32 @@
+{
+  "name": "ReactDocViewerExample",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "clean": "react-native-clean-project",
+    "test": "jest"
+  },
+  "dependencies": {
+    "react": "^16.3.0-alpha.1",
+    "react-mixin": "^3.0.5",
+    "react-native": "0.54.3",
+    "react-native-ble-manager": "6.5.3",
+    "react-native-doc-viewer": "2.7.8",
+    "react-native-fs": "^2.3.2",
+    "react-native-touch-id": "^4.3.0",
+    "react-native-vector-icons": "^6.0.2",
+    "react-navigation": "^2.18.2",
+    "react-timer-mixin": "^0.13.3"
+  },
+  "devDependencies": {
+    "babel-jest": "22.4.3",
+    "babel-preset-react-native": "4.0.0",
+    "jest": "22.4.3",
+    "react-native-clean-project": "^3.0.0",
+    "react-test-renderer": "^16.3.0-alpha.1"
+  },
+  "jest": {
+    "preset": "react-native"
+  }
+}
