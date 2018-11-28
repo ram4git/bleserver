@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react';
-import { StyleSheet, Switch, Text, View } from 'react-native';
+import { NativeModules, StyleSheet, Switch, Text, View } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 
 
@@ -19,6 +19,15 @@ export default class Ble extends PureComponent {
         this.state = {
             isOn: false
         }
+    }
+
+    componentDidMount() {
+        //NativeModules.DAtAnchorBLE.sayHello();
+        NativeModules.DAtAnchorBLEManager.startBLEServer(v => {
+            console.log('CALLED START', v);
+        });
+
+
     }
 
     render() {
