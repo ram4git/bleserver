@@ -1,19 +1,3 @@
-/*import { AppRegistry } from 'react-native';
-import App from './App';
-
-const Component = Platform.select({
-  ios: () => require('ComponentIOS'),
-  android: () => require('ComponentAndroid'),
-})();
-
-
-AppRegistry.registerComponent('ReactDocViewerExample', () => App);*/
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
- */
-
 import React, { Component } from 'react';
 import { ActivityIndicator, Alert, Button, NativeEventEmitter, NativeModules, Platform, StyleSheet, Text, TouchableHighlight, View } from 'react-native';
 import OpenFile from 'react-native-doc-viewer';
@@ -383,5 +367,3 @@ const styles = StyleSheet.create({
     marginBottom: 5,
   },
 });
-
-//AppRegistry.registerComponent('ReactDocViewerExample', () => ReactDocViewerExample);

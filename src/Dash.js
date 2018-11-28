@@ -22,7 +22,7 @@ export default class Dash extends PureComponent {
                         <Text style={s.text}>Chart #1</Text>
                         <WebView
                             originWhitelist={['*']}
-                            source={{ html: '<iframe src="https://play.grafana.org/d-solo/000000012/grafana-play-home?orgId=1&panelId=3&from=1543183722335&to=1543190922335&theme=light" width="100%" height="450" frameborder="0"></iframe>' }}
+                            source={{ html: '<iframe src="https://play.grafana.org/d-solo/000000012/grafana-play-home?orgId=1&panelId=3&from=1543183722335&to=1543190922335&theme=light" width="100%" height="400" frameborder="0"></iframe>' }}
                         />
                     </View>
 
@@ -30,7 +30,7 @@ export default class Dash extends PureComponent {
                         <Text style={s.text}>Chart #2</Text>
                         <WebView
                             originWhitelist={['*']}
-                            source={{ html: '<iframe src="https://play.grafana.org/d-solo/000000012/grafana-play-home?orgId=1&panelId=5&from=1543184977249&to=1543192177249&theme=light" width="100%" height="450" frameborder="0"></iframe>' }}
+                            source={{ html: '<iframe src="https://play.grafana.org/d-solo/000000012/grafana-play-home?orgId=1&panelId=5&from=1543184977249&to=1543192177249&theme=light" width="100%" height="400" frameborder="0"></iframe>' }}
                         />
                     </View>
 
@@ -38,21 +38,21 @@ export default class Dash extends PureComponent {
                         <Text style={s.text}>Chart #3</Text>
                         <WebView
                             originWhitelist={['*']}
-                            source={{ html: '<iframe src="https://play.grafana.org/d-solo/000000016/graph-styles?orgId=1&panelId=17&theme=light" width="100%" height="450"  frameborder="0"></iframe>' }}
+                            source={{ html: '<iframe src="https://play.grafana.org/d-solo/000000016/graph-styles?orgId=1&panelId=17&theme=light" width="100%" height="400"  frameborder="0"></iframe>' }}
                         />
                     </View>
                     <View style={s.chart}>
                         <Text style={s.text}>Flags</Text>
                         <WebView
                             originWhitelist={['*']}
-                            source={{ html: '<iframe src="https://play.grafana.org/d-solo/000000074/alerting?orgId=1&panelId=3&theme=light" width="100%" height="450" frameborder="0"></iframe>' }}
+                            source={{ html: '<iframe src="https://play.grafana.org/d-solo/000000074/alerting?orgId=1&panelId=3&theme=light" width="100%" height="400" frameborder="0"></iframe>' }}
                         />
                     </View>
                     <View style={s.chart}>
                         <Text style={s.text}>Meter</Text>
                         <WebView
                             originWhitelist={['*']}
-                            source={{ html: '<iframe src="https://play.grafana.org/d-solo/000000003/big-dashboard?orgId=1&panelId=22&from=1543190118331&to=1543193718331&theme=light" width="100%" height="450" frameborder="0"></iframe>' }}
+                            source={{ html: '<iframe src="https://play.grafana.org/d-solo/000000003/big-dashboard?orgId=1&panelId=22&from=1543190118331&to=1543193718331&theme=light" width="100%" height="400" frameborder="0"></iframe>' }}
                         />
                     </View>
                     <View style={s.chart}>
